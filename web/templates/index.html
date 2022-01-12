@@ -1,8 +1,84 @@
 {% extends "./base/base.html" %}
 {% block main %}
-    <div class="main__area">
-        <h1 class="text-3xl font-bold underline">
-            Hello borld!
-        </h1>
+    <div class="py-10 px-14 mx-auto max-w-3xl text-white flex flex-col space-y-16">
+        <div class="items-center space-x-4 sm:flex">
+            <a href="google.com" class="hover:text-indigo-9">
+                projects
+            </a>
+            <a href="google.com">
+                about
+            </a>
+            <a href="google.com">
+                albums
+            </a>
+            <a href="google.com">
+                film
+            </a>
+            <a href="google.com">
+                blog
+            </a>
+        </div>
+        <div class="space-y-6">
+            <div class="flex flex-col space-y-6">
+                <div class="space-y-2">
+                    <h1 class="text-6xl font-bold">Hey, I'm Kamil 👋</h1>
+                </div>
+                <div class="space-y-4">
+                    <p class="text-neutral-400">
+                        I'm a 21 year old <span class="font-bold">software engineering</span> student from Poland, residing in the United Kingdom. Currently, I'm mainly interested
+                        in developing backend systems, whether it's web-related or otherwise. Passionate about performant, maintainable software.
+                    </p>
+                </div>
+                <div class="flex flex-row space-x-2">
+                    <a href="https://github.com/k9mil">
+                        <img class="h-12 w-12 p-2" src="{{ url_for('static', filename='/img/github.svg') }}" alt="">
+                    </a>
+                    <a href="https://twitter.com/joebiden">
+                        <img class="h-12 w-12 p-3" src="{{ url_for('static', filename='/img/twitter.svg') }}" alt="">
+                    </a>
+                    <a href="https://discord.com/users/886739001812332564">
+                        <img class="h-12 w-12 p-2" src="{{ url_for('static', filename='/img/discord.svg') }}" alt="">
+                    </a>
+                    <a href="">
+                        <img class="h-12 w-12 p-3" src="{{ url_for('static', filename='/img/mail.svg') }}" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="flex flex-col space-y-6">
+                <div>
+                    <h2 class="text-2xl font-bold">Who am I?</h2>
+                </div>
+                <div class="space-y-4">
+                    <p class="text-neutral-400">
+                        Currently a 2nd year BSc student at Strathclyde University, Glasgow and exploring Python & Golang in my free time,
+                        in which I have made a couple of open source projects already. Everything I make is public,
+                        as I truly believe the access to information should be free and available to the public. If you want to find out more about me, 
+                        or my projects, head over to "/about".
+                    </p>
+                </div>
+            </div>
+            <div class="flex flex-col space-y-6">
+                <div>
+                    <h2 class="text-2xl font-bold">What do I do?</h2>
+                </div>
+                <div class="space-y-4">
+                    <p class="text-neutral-400">
+                        If you wish to find out about my favourite albums, or film head over to /albums/,
+                        or /film/ to get to know me better!
+                    </p>
+                </div>
+            </div>
+            <div class="flex flex-col space-y-6">
+                <div>
+                    <h2 class="text-2xl font-bold">Technologies</h2>
+                </div>
+                <div class="space-y-4">
+                    <p class="text-neutral-400">
+                        I use a variety of different technologies, depending on the task at hand to make the most
+                        use of them. If you wish to find out more about the technologies I use, see "/technologies".
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}
