@@ -1,0 +1,23 @@
+{
+  "name": "web-portfolio",
+  "version": "1.0.0",
+  "description": "Source code for my personal website.",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss -i web/static/src/style.css -o web/static/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamil-codes/kamil.codes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kamil-codes/kamil.codes/issues"
+  },
+  "homepage": "https://github.com/kamil-codes/kamil.codes#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.13"
+  }
+}
