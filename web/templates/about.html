@@ -23,54 +23,16 @@
                 </p>
             </div>
             <div class="grid grid-cols-2 grid-rows-3 md:grid-cols-3 md:grid-rows-2 sm:grid-cols-2 sm:grid-rows-3 gap-6">
-                <div class="">
+                {% for film in films %}
                     <div class="">
-                        <img class="h-64 w-48 rounded-lg" src="{{ url_for('static', filename='/img/film/taxi_driver.jpg') }}" alt="">
+                        <div class="">
+                            <img class="h-64 w-48 rounded-lg" src="{{ film[0] }}" alt="">
+                        </div>
+                        <div class="py-2">
+                            <h2 class="text-md font-semibold">{{ film[1] }}</h2>
+                        </div>
                     </div>
-                    <div class="py-2">
-                        <h2 class="text-md font-semibold">Taxi Driver</h2>
-                    </div>
-                </div>
-                <div class="">
-                    <div class="">
-                        <img class="h-64 w-48 rounded-lg" src="{{ url_for('static', filename='/img/film/good_fellas.jpg') }}" alt="">
-                    </div>
-                    <div class="py-2">
-                        <h2 class="text-md font-semibold">Goodfellas</h2>
-                    </div>
-                </div>
-                <div class="">
-                    <div class="">
-                        <img class="h-64 w-48 rounded-lg" src="{{ url_for('static', filename='/img/film/fight_club.jpg') }}" alt="">
-                    </div>
-                    <div class="py-2">
-                        <h2 class="text-md font-semibold">Fight Club</h2>
-                    </div>
-                </div>
-                <div class="">
-                    <div class="">
-                        <img class="h-64 w-48 rounded-lg" src="{{ url_for('static', filename='/img/film/barry_lyndon.jpg') }}" alt="">
-                    </div>
-                    <div class="py-2">
-                        <h2 class="text-md font-semibold">Barry Lyndon</h2>
-                    </div>
-                </div>
-                <div class="">
-                    <div class="">
-                        <img class="h-64 w-48 rounded-lg" src="{{ url_for('static', filename='/img/film/children_of_men.jpg') }}" alt="">
-                    </div>
-                    <div class="py-2">
-                        <h2 class="text-md font-semibold">Children of Men</h2>
-                    </div>
-                </div>
-                <div class="">
-                    <div class="">
-                        <img class="h-64 w-48 rounded-lg" src="{{ url_for('static', filename='/img/film/la_haine.jpg') }}" alt="">
-                    </div>
-                    <div class="py-2">
-                        <h2 class="text-md font-semibold">La Haine</h2>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
         <div class="flex flex-col space-y-4">
@@ -83,55 +45,17 @@
                     music albums of all time.
                 </p>
             </div>
-            <div class="grid md:grid-cols-3 md:grid-rows-2 sm:grid-cols-2 sm:grid-rows-3 gap-6">
-                <div class="">
+            <div class="grid grid-cols-2 grid-rows-3 md:grid-cols-3 md:grid-rows-2 sm:grid-cols-2 sm:grid-rows-3 gap-6">
+                {% for album in albums %}
                     <div class="">
-                        <img class="h-48 w-48 rounded-lg" src="{{ url_for('static', filename='/img/albums/mbdtf.jpg') }}" alt="">
+                        <div class="">
+                            <img class="h-48 w-48 rounded-lg" src="{{ album[0] }}" alt="">
+                        </div>
+                        <div class="py-2">
+                            <h2 class="text-md font-semibold">{{ album[1] }}</h2>
+                        </div>
                     </div>
-                    <div class="py-2">
-                        <h2 class="text-md font-semibold">My Beautiful Dark Twisted Fantasy</h2>
-                    </div>
-                </div>
-                <div class="">
-                    <div class="">
-                        <img class="h-48 w-48 rounded-lg" src="{{ url_for('static', filename='/img/albums/madvillain.jpg') }}" alt="">
-                    </div>
-                    <div class="py-2">
-                        <h2 class="text-md font-semibold">Madvillain</h2>
-                    </div>
-                </div>
-                <div class="">
-                    <div class="">
-                        <img class="h-48 w-48 rounded-lg" src="{{ url_for('static', filename='/img/albums/atrocity_exhibition.jpg') }}" alt="">
-                    </div>
-                    <div class="py-2">
-                        <h2 class="text-md font-semibold">Atrocity Exhibition</h2>
-                    </div>
-                </div>
-                <div class="">
-                    <div class="">
-                        <img class="h-48 w-48 rounded-lg" src="{{ url_for('static', filename='/img/albums/slauson_malone.jpg') }}" alt="">
-                    </div>
-                    <div class="py-2">
-                        <h2 class="text-md font-semibold">Vergangenheitsbewältigung</h2>
-                    </div>
-                </div>
-                <div class="">
-                    <div class="">
-                        <img class="h-48 w-48 rounded-lg" src="{{ url_for('static', filename='/img/albums/blonde.jpg') }}" alt="">
-                    </div>
-                    <div class="py-2">
-                        <h2 class="text-md font-semibold">Blonde</h2>
-                    </div>
-                </div>
-                <div class="">
-                    <div class="">
-                        <img class="h-48 w-48 rounded-lg" src="{{ url_for('static', filename='/img/albums/808s.jpg') }}" alt="">
-                    </div>
-                    <div class="py-2">
-                        <h2 class="text-md font-semibold">808s & Heartbreak</h2>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         <div class="flex flex-col space-y-4">
             <div class="">
@@ -144,55 +68,17 @@
                 </p>
             </div>
             <div class="flex flex-col space-y-4">
-                <div class="grid md:grid-cols-3 md:grid-rows-2 sm:grid-cols-2 sm:grid-rows-3 gap-6">
-                    <div class="">
+                <div class="grid grid-cols-2 grid-rows-3 md:grid-cols-3 md:grid-rows-2 sm:grid-cols-2 sm:grid-rows-3 gap-6">
+                    {% for book in books %}
                         <div class="">
-                            <img class="h-64 w-42 rounded-lg" src="{{ url_for('static', filename='/img/book/1984.jpg') }}" alt="">
+                            <div class="">
+                                <img class="h-64 w-42 rounded-lg" src="{{ book[0] }}" alt="">
+                            </div>
+                            <div class="py-2">
+                                <h2 class="text-md font-semibold">{{ book[1] }}</h2>
+                            </div>
                         </div>
-                        <div class="py-2">
-                            <h2 class="text-md font-semibold">1984</h2>
-                        </div>
-                    </div>
-                    <div class="">
-                        <div class="">
-                            <img class="h-64 w-42 rounded-lg" src="{{ url_for('static', filename='/img/book/howtohidee.jpg') }}" alt="">
-                        </div>
-                        <div class="py-2">
-                            <h2 class="text-md font-semibold">How to Hide an Empire</h2>
-                        </div>
-                    </div>
-                    <div class="">
-                        <div class="">
-                            <img class="h-64 w-42 rounded-lg" src="{{ url_for('static', filename='/img/book/sapiens.jpg') }}" alt="">
-                        </div>
-                        <div class="py-2">
-                            <h2 class="text-md font-semibold">Sapiens</h2>
-                        </div>
-                    </div>
-                    <div class="">
-                        <div class="">
-                            <img class="h-64 w-42 rounded-lg" src="{{ url_for('static', filename='/img/book/steve_jobs.jpg') }}" alt="">
-                        </div>
-                        <div class="py-2">
-                            <h2 class="text-md font-semibold">Steve Jobs</h2>
-                        </div>
-                    </div>
-                    <div class="">
-                        <div class="">
-                            <img class="h-64 w-42 rounded-lg" src="{{ url_for('static', filename='/img/book/technological_slavery.jpg') }}" alt="">
-                        </div>
-                        <div class="py-2">
-                            <h2 class="text-md font-semibold">Technological Slavery</h2>
-                        </div>
-                    </div>
-                    <div class="">
-                        <div class="">
-                            <img class="h-64 w-42 rounded-lg" src="{{ url_for('static', filename='/img/book/bravenewworld.jpg') }}" alt="">
-                        </div>
-                        <div class="py-2">
-                            <h2 class="text-md font-semibold">Brave New World</h2>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
