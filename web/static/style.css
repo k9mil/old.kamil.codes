@@ -524,6 +524,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 3rem;
 }
 
+.w-4\/5 {
+  width: 80%;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-rows-3 {
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+
 .flex-row {
   flex-direction: row;
 }
