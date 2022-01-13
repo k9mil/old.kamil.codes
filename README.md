@@ -6,6 +6,6 @@ Source code for my personal website.
 
 - Flask
 - TailwindCSS
-- nginx
+- gunicorn
 
 Was Flask necessary, or even needed? Probably not, might re-write this in TS/JS in the future.
