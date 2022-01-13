@@ -12,6 +12,12 @@ def about():
 
 @main.route("/projects")
 def projects():
+    projects_list = [
+        ["🗺️ statum", "A Twitch streamer-related website. Written in Python + Flask, with MongoDB. Current features include Twitch OAuth integration, personalized dashboard, unique streamer insights & much more."],
+        ["🦅 eagle", "A simple, fast, and fun CLI-based application which functions as a helper to find answers to your programming questions!"],
+        ["👁️ Oculus", "Unmaintained camera scraper for Allegro & OLX to try and catch low priced cameras at user-set prices."],
+        ["⚡ kamil.codes", "My personal web(site) created with Flask, TailwindCSS and nginx."],
+    ]
     return render_template("projects.html")
 
 @main.route("/technologies")
