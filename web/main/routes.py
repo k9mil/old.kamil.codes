@@ -14,10 +14,6 @@ def about():
 def projects():
     return render_template("projects.html")
 
-@main.route("/favourites")
-def favourites():
-    return render_template("favourites.html")
-
 @main.route("/technologies")
 def technologies():
     return render_template("technologies.html")
