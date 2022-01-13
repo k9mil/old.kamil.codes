@@ -14,13 +14,9 @@ def about():
 def projects():
     return render_template("projects.html")
 
-@main.route("/albums")
-def albums():
-    return render_template("albums.html")
-
-@main.route("/film")
-def film():
-    return render_template("film.html")
+@main.route("/favourites")
+def favourites():
+    return render_template("favourites.html")
 
 @main.route("/technologies")
 def technologies():

@@ -8,7 +8,26 @@
     <title>kamil.codes</title>
 </head>
 <body class="bg-black">
-    {% block main %}
-    {% endblock %}
+    <div class="py-10 px-14 mx-auto max-w-3xl text-white flex flex-col space-y-16">
+        <div class="items-center space-x-4 sm:flex">
+            <a href="{{ url_for('main.index') }}" class="hover:text-red-600 transition duration-300 ease-in-out">
+                home
+            </a>
+            <a href="{{ url_for('main.projects') }}" class="hover:text-red-600 transition duration-300 ease-in-out">
+                projects
+            </a>
+            <a href="{{ url_for('main.about') }}" class="hover:text-red-600 transition duration-300 ease-in-out">
+                about
+            </a>
+            <a href="{{ url_for('main.favourites') }}" class="hover:text-red-600 transition duration-300 ease-in-out">
+                favourites
+            </a>
+            <a href="{{ url_for('main.blog') }}" class="hover:text-red-600 transition duration-300 ease-in-out">
+                blog
+            </a>
+        </div>
+        {% block main %}
+        {% endblock %}
+    </div>
 </body>
 </html>
