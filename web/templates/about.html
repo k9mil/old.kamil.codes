@@ -1,6 +1,6 @@
 {% extends "./base/base.html" %}
 {% block main %}
-    <div class="space-y-6">
+    <div class="flex flex-col space-y-16">
         <div class="flex flex-col space-y-6">
             <div class="">
                 <h1 class="text-6xl font-bold">About</h1>
@@ -16,12 +16,6 @@
             <div class="">
                 <h2 class="text-3xl font-bold">Film</h2>
             </div>
-            <div class="">
-                <p class="text-neutral-400">I have fallen in love with film over the last couple of years,
-                    and my tastes have became more refined as time went on. Below you
-                    can find my current favourite films of all time.
-                </p>
-            </div>
             <div class="grid grid-cols-2 grid-rows-3 md:grid-cols-3 md:grid-rows-2 sm:grid-cols-2 sm:grid-rows-3 gap-6">
                 {% for film in films %}
                     <div class="">
@@ -35,15 +29,9 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="flex flex-col space-y-4">
+        <div class="flex flex-col space-y-6">
             <div class="">
                 <h2 class="text-3xl font-bold">Music</h2>
-            </div>
-            <div class="">
-                <p class="text-neutral-400">I love music, even more than film. I use Spotify daily, mostly in the afternoon until midnight; however
-                    I do indulge in some lofi hip-hop in the morning, everyday. Below you can see my favourite
-                    music albums of all time.
-                </p>
             </div>
             <div class="grid grid-cols-2 grid-rows-3 md:grid-cols-3 md:grid-rows-2 sm:grid-cols-2 sm:grid-rows-3 gap-6">
                 {% for album in albums %}
@@ -57,15 +45,9 @@
                     </div>
                 {% endfor %}
             </div>
-        <div class="flex flex-col space-y-4">
+        <div class="flex flex-col space-y-6">
             <div class="">
                 <h2 class="text-3xl font-bold">Books</h2>
-            </div>
-            <div class="">
-                <p class="text-neutral-400">As much as I love the two art forms above, this one has made the most
-                    drastic change in my personality, life, and all else. I should read more.
-                    See below for my favourite books I've ever read.
-                </p>
             </div>
             <div class="flex flex-col space-y-4">
                 <div class="grid grid-cols-2 grid-rows-3 md:grid-cols-3 md:grid-rows-2 sm:grid-cols-2 sm:grid-rows-3 gap-6">
