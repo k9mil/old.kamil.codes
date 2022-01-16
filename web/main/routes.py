@@ -28,7 +28,11 @@ def projects():
 
 @main.route("/technologies")
 def technologies():
-    return render_template("technologies.html")
+    filename = os.path.join(app.static_folder, 'json/technologies.json')
+    with open(filename) as technologies:
+        data = json.load(technologies)
+
+    return render_template("technologies.html", data=data)
 
 @main.route("/blog")
 def blog():
