@@ -2,20 +2,14 @@
 {% block main %}
     <div class="flex flex-col space-y-16">
         <div class="flex flex-col space-y-6">
-            <div class="">
-                <h1 class="text-6xl font-bold">About</h1>
-            </div>
-            <div class="">
-                <p class="text-neutral-400">Hey! You're probably here to find out more about my tastes. I won't ramble too much.
-                    Below you have a list of my top 6 films, music albums & books in that order. Feel
-                    free to skim through it to get to know me better!
-                </p>
-            </div>
+            <h1 class="text-6xl font-bold">About</h1>
+            <p class="text-neutral-400">Hey! You're probably here to find out more about my tastes. I won't ramble too much.
+                Below you have a list of my top 6 films, music albums & books in that order. Feel
+                free to skim through it to get to know me better!
+            </p>
         </div>
         <div class="flex flex-col space-y-6">
-            <div class="">
-                <h2 class="text-3xl font-bold">Film</h2>
-            </div>
+            <h2 class="text-3xl font-bold">Film</h2>
             <div class="grid grid-cols-2 grid-rows-3 md:grid-cols-3 md:grid-rows-2 sm:grid-cols-2 sm:grid-rows-3 gap-6">
                 {% for film in films %}
                     <div class="">
@@ -30,9 +24,7 @@
             </div>
         </div>
         <div class="flex flex-col space-y-6">
-            <div class="">
-                <h2 class="text-3xl font-bold">Music</h2>
-            </div>
+            <h2 class="text-3xl font-bold">Music</h2>
             <div class="grid grid-cols-2 grid-rows-3 md:grid-cols-3 md:grid-rows-2 sm:grid-cols-2 sm:grid-rows-3 gap-6">
                 {% for album in albums %}
                     <div class="">
@@ -46,9 +38,7 @@
                 {% endfor %}
             </div>
         <div class="flex flex-col space-y-6">
-            <div class="">
-                <h2 class="text-3xl font-bold">Books</h2>
-            </div>
+            <h2 class="text-3xl font-bold">Books</h2>
             <div class="flex flex-col space-y-4">
                 <div class="grid grid-cols-2 grid-rows-3 md:grid-cols-3 md:grid-rows-2 sm:grid-cols-2 sm:grid-rows-3 gap-6">
                     {% for book in books %}

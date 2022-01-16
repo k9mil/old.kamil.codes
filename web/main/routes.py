@@ -48,6 +48,10 @@ def projects():
 
     return render_template("projects.html", projects=projects_list)
 
+@main.route("/technologies")
+def technologies():
+    return render_template("technologies.html")
+
 @main.route("/blog")
 def blog():
     return render_template("blog.html")
