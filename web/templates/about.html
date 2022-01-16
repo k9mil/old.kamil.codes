@@ -8,51 +8,21 @@
                 free to skim through it to get to know me better!
             </p>
         </div>
-        <div class="flex flex-col space-y-6">
-            <h2 class="text-3xl font-bold">Film</h2>
-            <div class="grid grid-cols-2 grid-rows-3 md:grid-cols-3 md:grid-rows-2 sm:grid-cols-2 sm:grid-rows-3 gap-6">
-                {% for film in films %}
-                    <div class="">
-                        <div class="">
-                            <img class="h-64 w-48 rounded-lg" src="{{ film[0] }}" alt="">
-                        </div>
-                        <div class="py-2">
-                            <h2 class="text-md font-semibold">{{ film[1] }}</h2>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
-        <div class="flex flex-col space-y-6">
-            <h2 class="text-3xl font-bold">Music</h2>
-            <div class="grid grid-cols-2 grid-rows-3 md:grid-cols-3 md:grid-rows-2 sm:grid-cols-2 sm:grid-rows-3 gap-6">
-                {% for album in albums %}
-                    <div class="">
-                        <div class="">
-                            <img class="h-48 w-48 rounded-lg" src="{{ album[0] }}" alt="">
-                        </div>
-                        <div class="py-2">
-                            <h2 class="text-md font-semibold">{{ album[1] }}</h2>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-        <div class="flex flex-col space-y-6">
-            <h2 class="text-3xl font-bold">Books</h2>
-            <div class="flex flex-col space-y-4">
+        {% for k, v in data.items() %}
+            <div class="flex flex-col space-y-6">
+                <h2 class="text-3xl font-bold">{{ k }}</h2>
                 <div class="grid grid-cols-2 grid-rows-3 md:grid-cols-3 md:grid-rows-2 sm:grid-cols-2 sm:grid-rows-3 gap-6">
-                    {% for book in books %}
+                    {% for i in v %}
                         <div class="">
                             <div class="">
-                                <img class="h-64 w-42 rounded-lg" src="{{ book[0] }}" alt="">
+                                <img class="h-64 w-48 rounded-lg" src="{{ i[0] }}" alt="">
                             </div>
                             <div class="py-2">
-                                <h2 class="text-md font-semibold">{{ book[1] }}</h2>
+                                <h2 class="text-md font-semibold">{{ i[1] }}</h2>
                             </div>
                         </div>
                     {% endfor %}
                 </div>
             </div>
-        </div>
-    </div>
+        {% endfor %}
 {% endblock %}
