@@ -15,7 +15,13 @@
                     {% for i in v %}
                         <div class="">
                             <div class="">
-                                <img class="h-64 w-48 rounded-lg" src="{{ i[0] }}" alt="">
+                                {% if k == "Music" %}
+                                    <img class="h-48 w-48 rounded-lg" src="{{ i[0] }}" alt="">
+                                {% elif k == "Books" %}
+                                    <img class="h-64 w-42 rounded-lg" src="{{ i[0] }}" alt="">
+                                {% else %}
+                                    <img class="h-64 w-48 rounded-lg" src="{{ i[0] }}" alt="">
+                                {% endif %}
                             </div>
                             <div class="py-2">
                                 <h2 class="text-md font-semibold">{{ i[1] }}</h2>
