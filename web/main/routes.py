@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, current_app as app
+from flask import Blueprint, render_template, send_from_directory, request, current_app as app
 import json, os
 
 main = Blueprint('main', __name__)
@@ -37,3 +37,7 @@ def technologies():
 @main.route("/blog")
 def blog():
     return render_template("blog.html")
+
+@main.route("/robots.txt")
+def robots_dot_txt():
+    return send_from_directory(app.static_folder, request.path[1:])
