@@ -1,4 +1,5 @@
 const colors = require('tailwindcss/colors')
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   content: [
@@ -21,6 +22,11 @@ module.exports = {
     },
     fontFamily: {
       'sans': ['Roboto', 'sans-serif'],
+    },
+    screens: {
+      'xxs': '1px',
+      'xs': '475px',
+      ...defaultTheme.screens,
     },
   },
   plugins: [],
