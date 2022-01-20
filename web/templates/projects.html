@@ -1,14 +1,14 @@
 {% extends "./base/base.html" %}
 {% block main %}
     <div class="space-y-12">
-        <h1 class="text-6xl font-bold">Projects</h1>
+        <h1 class="xs:text-6xl font-bold xxs:text-4xl">Projects</h1>
         <div class="flex flex-col space-y-6">
             {% for project in projects %}
                 <a href="{{ project[2] }}" target="_blank" rel="noopener">
                     <div class="border border-neutral-800 rounded-lg p-4 hover:border-red-600 transition duration-300 ease-in-out">
-                        <h2 class="text-lg font-semibold">{{ project[0] }}</h2>
+                        <h2 class="xs:text-lg font-semibold xxs:text-md">{{ project[0] }}</h2>
                         <div class="mt-2">
-                            <p>{{ project[1] }}</p>
+                            <p class="xs:text-md xxs:text-sm">{{ project[1] }}</p>
                         </div>   
                     </div>
                 </a>
