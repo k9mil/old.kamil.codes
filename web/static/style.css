@@ -612,6 +612,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 
+.space-y-0 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0px * var(--tw-space-y-reverse));
+}
+
 .self-center {
   align-self: center;
 }
@@ -843,12 +849,54 @@ h2 {
 }
 
 @media (min-width: 1px) {
+  .xxs\:flex {
+    display: flex;
+  }
+
   .xxs\:w-48 {
     width: 12rem;
   }
 
   .xxs\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .xxs\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .xxs\:flex-row {
+    flex-direction: row;
+  }
+
+  .xxs\:flex-col {
+    flex-direction: column;
+  }
+
+  .xxs\:items-start {
+    align-items: flex-start;
+  }
+
+  .xxs\:justify-items-start {
+    justify-items: start;
+  }
+
+  .xxs\:space-x-0 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0px * var(--tw-space-x-reverse));
+    margin-left: calc(0px * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .xxs\:space-y-4 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+  }
+
+  .xxs\:space-y-2 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
   }
 
   .xxs\:self-center {
@@ -877,8 +925,36 @@ h2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .xs\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .xs\:grid-rows-3 {
     grid-template-rows: repeat(3, minmax(0, 1fr));
+  }
+
+  .xs\:flex-row {
+    flex-direction: row;
+  }
+
+  .xs\:flex-col {
+    flex-direction: column;
+  }
+
+  .xs\:items-center {
+    align-items: center;
+  }
+
+  .xs\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1rem * var(--tw-space-x-reverse));
+    margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .xs\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
 
   .xs\:self-auto {
@@ -887,6 +963,10 @@ h2 {
 
   .xs\:text-left {
     text-align: left;
+  }
+
+  .xs\:text-center {
+    text-align: center;
   }
 }
 
@@ -903,8 +983,16 @@ h2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .sm\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .sm\:grid-rows-3 {
     grid-template-rows: repeat(3, minmax(0, 1fr));
+  }
+
+  .sm\:text-left {
+    text-align: left;
   }
 }
 
