@@ -991,6 +991,26 @@ h2 {
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
+
+  .xs\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .xs\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .xs\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .xs\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
 @media (min-width: 640px) {

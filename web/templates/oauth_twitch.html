@@ -5,38 +5,38 @@
 {% block main %}
     <div class="space-y-6">
         <div class="flex flex-col space-y-6">
-            <h1 class="text-5xl font-bold">Manual Twitch OAuth Authentication in Flask</h1>
+            <h1 class="s:text-5xl font-bold xs:text-4xl">Manual Twitch OAuth Authentication in Flask</h1>
         </div>
         <div class="flex flex-col space-y-6">
-            <p class="text-md text-neutral-400 leading-6">
+            <p class="text-md text-neutral-400 leading-6 s:text-md xs:text-sm">
                 Hello, World! If you're wanting to create a Flask application that integrates with Twitch in any way, you'll need tokens. Now, what are tokens, and how do you get them? Without diving too much into technical details, tokens are a convenient way of authenticating users. 
             </p>
-            <p class="text-md text-neutral-400 leading-6">
+            <p class="text-md text-neutral-400 leading-6 s:text-md xs:text-sm">
                 Twitch supports OAuth for an authentication method, though, they also support OIDC, however we will only be covering the OAuth part as not only is that the recommended way by Twitch, it's also the one I have used the most.
             </p>
-            <h1 class="text-3xl font-bold">Setting up</h1>
-            <p class="text-md text-neutral-400 leading-6">
+            <h1 class="s:text-3xl font-bold xs:text-2xl">Setting up</h1>
+            <p class="text-md text-neutral-400 leading-6 s:text-md xs:text-sm">
                 Let's start off with creating a simple Flask project, but before anything, we should create a virtual environment, though this step is optional, it is highly recommended!
             </p>
-            <p class="text-md text-neutral-400 leading-6">
+            <p class="text-md text-neutral-400 leading-6 s:text-md xs:text-sm">
                 Without going too much into detail (again), a virtual environment is an isolated mix of python libraries, that are unique for each project you make. To create a virtual environment, all you need is python, and simply do this:
                 <img src="/static//img/blog/venv.png" alt="" class="mt-6 rounded">
             </p>
-            <p class="text-md text-neutral-400 leading-6">
+            <p class="text-md text-neutral-400 leading-6 s:text-md xs:text-sm">
                 First line creates the virtual environment & the second one activates it in your current terminal. Great, we now have an environment to work in! Now onto Flask. We will firstly have to install Flask via pip:
                 <img src="/static//img/blog/flask_install.png" alt="" class="mt-6 rounded">
             </p>
-            <p class="text-md text-neutral-400 leading-6">
+            <p class="text-md text-neutral-400 leading-6 s:text-md xs:text-sm">
                 Now, before touching Flask, we will have to ensure that our environment variables are correctly set. 
                 Bear in mind that this is entirely dependent on what type of Terminal you are using, below you can see
                 the most common types of terminal and the respective way to set an environment variable.
                 <img src="/static//img/blog/example_env.png" alt="" class="mt-6 rounded">
             </p>
-            <p class="text-md text-neutral-400 leading-6">
+            <p class="text-md text-neutral-400 leading-6 s:text-md xs:text-sm">
                 Now, we will simply create a basic flask structure recommended by the Pallets team, which is nothing more
                 than a single function that fires on the / endpoint.
             </p>
-            <p class="text-md text-neutral-400 leading-6">
+            <p class="text-md text-neutral-400 leading-6 s:text-md xs:text-sm">
 <pre class="rounded"><code class="language-python">from flask import Flask
 	
 app = Flask(__name__)
@@ -45,23 +45,23 @@ app = Flask(__name__)
 def hello_world():
     return "<p>Hello, World!</p>"</code></pre>
             </p>
-            <h1 class="text-3xl font-bold">Twitch Application</h1>
-            <p class="text-md text-neutral-400 leading-6">
+            <h1 class="s:text-3xl font-bold xs:text-2xl">Twitch Application</h1>
+            <p class="text-md text-neutral-400 leading-6 s:text-md xs:text-sm">
                 Perfect. Now, before we get into the Flask logic, we have to obtain keys for our application, which are provided by Twitch themselves, 
                 therefore head over <a class="hover:text-red-600 font-bold" href="https://dev.twitch.tv/docs/authentication/getting-tokens-oauth#oauth-client-credentials-flow" target="_blank" rel="noopener">here</a> and click "Register your application" and fill out all the necessary details required.
                 <img src="/static//img/blog/twitch_console.png" alt="" class="mt-6 rounded">
             </p>
-            <p class="text-md text-neutral-400 leading-6">
+            <p class="text-md text-neutral-400 leading-6 s:text-md xs:text-sm">
                 Now with your Twitch application being created, click on the "Manage" button, and on the very bottom you will see a Client ID (and a Client Secret after you generate it, which is very important!).
             </p>
-            <p class="text-md text-neutral-400 leading-6">
+            <p class="text-md text-neutral-400 leading-6 s:text-md xs:text-sm">
                 With all of that out of the way we can get on with our Flask application that we created earlier. Though there are a couple of different authentication ways that Twitch provides (all have their own purpose!), which you can see on their official documentation <a class="hover:text-red-600 font-bold" href="https://dev.twitch.tv/docs/authentication/getting-tokens-oauth#oauth-client-credentials-flow" target="_blank" rel="noopener">here</a>, we will be using the “OAuth client credentials flow” method.
             </p>
-            <h1 class="text-3xl font-bold">Dealing with requests</h1>
-            <p class="text-md text-neutral-400 leading-6">
+            <h1 class="s:text-3xl font-bold xs:text-2xl">Dealing with requests</h1>
+            <p class="text-md text-neutral-400 leading-6 s:text-md xs:text-sm">
                 Let’s begin with modifying our existing simple Flask application, installing requests (necessary for both POST & GET requests). We declare two variables, with both our Client ID & Client Secret and used them in the f-string, which we later POSTed. To get the value of the print to your terminal, just open up the webpage and look back at your terminal.
             </p>
-            <p class="text-md text-neutral-400 leading-6">
+            <p class="text-md text-neutral-400 leading-6 s:text-md xs:text-sm">
 <pre class="rounded"><code class="language-python">from flask import Flask
 import requests
 
@@ -79,7 +79,7 @@ def example():
     return "<p>Hello, World!</p>"    
 </code></pre>
 </p>
-        <p class="text-md text-neutral-400 leading-6">
+        <p class="text-md text-neutral-400 leading-6 s:text-md xs:text-sm">
             Now, if you look back at the terminal, you will be presented with an access token, expiration date & a token type.
             Let's send a request to Twitch for something, to test our new access token:
         </p>
@@ -109,16 +109,16 @@ def example():
 
     return "<p>Hello, World!</p>"</code></pre>
 </div>
-        <p class="text-md text-neutral-400 leading-6">
+        <p class="text-md text-neutral-400 leading-6 s:text-md xs:text-sm">
             If you now run this script & take a peep at your terminal, you will see a JSON object with the current top live channel on twitch.
             Great! We can now successfully interact with Twitch and it's API, the <a class="hover:text-red-600 font-bold" href="https://dev.twitch.tv/docs/api/reference" target="_blank" rel="noopener">Twitch API documentation</a> is great and you should
             most definitely use it when working with Twitch.
         </p>
-        <p class="text-md text-neutral-400 leading-6">
+        <p class="text-md text-neutral-400 leading-6 s:text-md xs:text-sm">
             Lastly — if you're planning to ever deploy your application, or even put it on your public GitHub (or alternatives),
             remember to put your client secret into your envrionment variables!
         </p>
-        <p class="text-md text-neutral-400 leading-6">
+        <p class="text-md text-neutral-400 leading-6 s:text-md xs:text-sm">
             Thanks for reading!
         </p>
         </div>
