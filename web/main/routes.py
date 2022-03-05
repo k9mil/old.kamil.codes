@@ -38,6 +38,10 @@ def technologies():
 def blog():
     return render_template("blog.html")
 
+@main.route("/blog/oauth-twitch")
+def oauth_twitch():
+    return render_template("oauth_twitch.html")
+
 @main.route("/robots.txt")
 def robots_dot_txt():
     return send_from_directory(app.static_folder, request.path[1:])
