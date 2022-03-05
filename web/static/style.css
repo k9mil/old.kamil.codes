@@ -484,16 +484,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 0.5rem;
 }
 
-.ml-2 {
-  margin-left: 0.5rem;
-}
-
-.mt-4 {
-  margin-top: 1rem;
-}
-
 .mt-6 {
   margin-top: 1.5rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
 }
 
 .block {
@@ -516,10 +512,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 16rem;
 }
 
-.min-h-0 {
-  min-height: 0px;
-}
-
 .w-screen {
   width: 100vw;
 }
@@ -534,10 +526,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-48 {
   width: 12rem;
-}
-
-.min-w-0 {
-  min-width: 0px;
 }
 
 .grid-cols-2 {
@@ -606,36 +594,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-self: center;
 }
 
-.overflow-auto {
-  overflow: auto;
-}
-
-.overflow-hidden {
-  overflow: hidden;
-}
-
-.overflow-clip {
-  overflow: clip;
-}
-
-.overflow-scroll {
-  overflow: scroll;
-}
-
-.overflow-x-auto {
-  overflow-x: auto;
-}
-
 .overflow-x-hidden {
   overflow-x: hidden;
-}
-
-.overflow-x-scroll {
-  overflow-x: scroll;
-}
-
-.overflow-y-scroll {
-  overflow-y: scroll;
 }
 
 .break-words {
@@ -697,24 +657,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.25rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .font-bold {
@@ -742,16 +687,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-neutral-300 {
   --tw-text-opacity: 1;
   color: rgb(212 212 212 / var(--tw-text-opacity));
-}
-
-.text-red-400 {
-  --tw-text-opacity: 1;
-  color: rgb(248 113 113 / var(--tw-text-opacity));
-}
-
-.text-red-600 {
-  --tw-text-opacity: 1;
-  color: rgb(220 38 38 / var(--tw-text-opacity));
 }
 
 .transition {
@@ -930,6 +865,16 @@ h2 {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
+
+  .xxs\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .xxs\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }
 
 @media (min-width: 475px) {
@@ -992,11 +937,6 @@ h2 {
     line-height: 1.75rem;
   }
 
-  .xs\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-
   .xs\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -1026,6 +966,11 @@ h2 {
   .sm\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .sm\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
