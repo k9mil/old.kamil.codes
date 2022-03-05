@@ -27,7 +27,7 @@
                 <img src="/static//img/blog/flask_install.png" alt="" class="mt-6 rounded">
             </p>
             <p class="text-md text-neutral-400 leading-6">
-                Now, before touching Flask, we will have to ensure that our environment variables are correctly set (which we will discuss later in more depth). 
+                Now, before touching Flask, we will have to ensure that our environment variables are correctly set. 
                 Bear in mind that this is entirely dependent on what type of Terminal you are using, below you can see
                 the most common types of terminal and the respective way to set an environment variable.
                 <img src="/static//img/blog/example_env.png" alt="" class="mt-6 rounded">
@@ -69,8 +69,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def example():
-    cid = "r89y1g7u955vp4l2xifpo7w5fzg3ku"
-    csecret = "stixty7y3goeq438v2fnbojbwazcad"
+    cid = "b136m4ssafiqugd6rtanfgkl6g0v7h"
+    csecret = "tzww4kfp8eafewpnnhbgtrqh43u60l"
 
     req = f"https://id.twitch.tv/oauth2/token?client_id={cid}&client_secret={csecret}&grant_type=client_credentials"
                         
@@ -91,8 +91,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def example():
-    cid = "r89y1g7u955vp4l2xifpo7w5fzg3ku"
-    csecret = "stixty7y3goeq438v2fnbojbwazcad"
+    cid = "b136m4ssafiqugd6rtanfgkl6g0v7h"
+    csecret = "tzww4kfp8eafewpnnhbgtrqh43u60l"
 
     r1 = f"https://id.twitch.tv/oauth2/token?client_id={cid}&client_secret={csecret}\&grant_type=client_credentials"
                         
@@ -113,6 +113,10 @@ def example():
             If you now run this script & take a peep at your terminal, you will see a JSON object with the current top live channel on twitch.
             Great! We can now successfully interact with Twitch and it's API, the <a class="hover:text-red-600 font-bold" href="https://dev.twitch.tv/docs/api/reference" target="_blank" rel="noopener">Twitch API documentation</a> is great and you should
             most definitely use it when working with Twitch.
+        </p>
+        <p class="text-md text-neutral-400 leading-6">
+            Lastly — if you're planning to ever deploy your application, or even put it on your public GitHub (or alternatives),
+            remember to put your client secret into your envrionment variables!
         </p>
         <p class="text-md text-neutral-400 leading-6">
             Thanks for reading!
