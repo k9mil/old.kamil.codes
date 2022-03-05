@@ -20,8 +20,8 @@ def projects():
     projects_list = [
         ["🗺️ statum", "A Twitch streamer-related website. Written in Python + Flask, with MongoDB. Current features include Twitch OAuth integration, personalized dashboard, unique streamer insights & much more.", "https://github.com/k9mil/statum"],
         ["🦅 eagle", "A simple, fast, and fun CLI-based application which functions as a helper to find answers to your programming questions!", "https://github.com/k9mil/eagle"],
-        ["👁️ Oculus", "Unmaintained camera scraper for Allegro & OLX to try and catch low priced cameras at user-set prices.", "https://github.com/k9mil/oculus-monitor"],
         ["⚡ kamil.codes", "My personal web(site) created with Flask, TailwindCSS and gunicorn.", "https://github.com/kamil-codes/kamil.codes"],
+        ["👁️ Oculus", "Unmaintained camera scraper for Allegro & OLX to try and catch low priced cameras at user-set prices.", "https://github.com/k9mil/oculus-monitor"],
     ]
 
     return render_template("projects.html", projects=projects_list)
