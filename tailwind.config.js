@@ -21,7 +21,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      'sans': ['Roboto', 'sans-serif'],
+      'sans': ['Inconsolata', 'Roboto', 'sans-serif'],
     },
     screens: {
       'xxs': '1px',
