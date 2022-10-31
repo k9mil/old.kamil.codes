@@ -646,6 +646,15 @@ video {
   background-color: rgb(23 23 23 / var(--tw-bg-opacity));
 }
 
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.bg-clip-text {
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
@@ -705,6 +714,10 @@ video {
   color: rgb(163 163 163 / var(--tw-text-opacity));
 }
 
+.text-transparent {
+  color: transparent;
+}
+
 .text-neutral-300 {
   --tw-text-opacity: 1;
   color: rgb(212 212 212 / var(--tw-text-opacity));
@@ -722,24 +735,28 @@ video {
   transition-duration: 300ms;
 }
 
+.duration-500 {
+  transition-duration: 500ms;
+}
+
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-body{
+body {
   -ms-overflow-style:none;
   scrollbar-width:none
 }
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   display:none
 }
 
-h2{
+h2 {
   overflow-wrap:break-word
 }
 
-.wave{
+.wave {
   animation-name:wave-animation;
   animation-duration:2.5s;
   animation-iteration-count:infinite;
@@ -747,7 +764,7 @@ h2{
   display:inline-block
 }
 
-@keyframes wave-animation{
+@keyframes wave-animation {
   0%{
     transform:rotate(0deg)
   }
@@ -781,14 +798,34 @@ h2{
   }
 }
 
-.hover\:border-red-600:hover {
+.hover\:border-neutral-600:hover {
   --tw-border-opacity: 1;
-  border-color: rgb(220 38 38 / var(--tw-border-opacity));
+  border-color: rgb(82 82 82 / var(--tw-border-opacity));
 }
 
 .hover\:text-red-600:hover {
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
+.hover\:text-neutral-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(82 82 82 / var(--tw-text-opacity));
+}
+
+.hover\:text-neutral-700:hover {
+  --tw-text-opacity: 1;
+  color: rgb(64 64 64 / var(--tw-text-opacity));
+}
+
+.hover\:text-neutral-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(115 115 115 / var(--tw-text-opacity));
+}
+
+.hover\:text-neutral-400:hover {
+  --tw-text-opacity: 1;
+  color: rgb(163 163 163 / var(--tw-text-opacity));
 }
 
 @media (min-width: 1px) {
