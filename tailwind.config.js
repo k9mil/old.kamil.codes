@@ -21,7 +21,8 @@ module.exports = {
       },
     },
     fontFamily: {
-      'sans': ['Inconsolata', 'Roboto', 'sans-serif'],
+      'inconsolata': ['inconsolata','sans-serif'],
+      'inter': ['inter']
     },
     screens: {
       'xxs': '1px',
