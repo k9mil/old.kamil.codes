@@ -7,14 +7,6 @@ main = Blueprint('main', __name__)
 def index():
     return render_template("index.html")
 
-@main.route("/about")
-def about():
-    filename = os.path.join(app.static_folder, 'json/about.json')
-    with open(filename) as about:
-        data = json.load(about)
-
-    return render_template("about.html", data=data)
-
 @main.route("/projects")
 def projects():
     projects_list = [
@@ -22,6 +14,7 @@ def projects():
         ["🦅 eagle", "A simple, fast, and fun CLI-based application which functions as a helper to find answers to your programming questions! Written in Golang + Cobra.", "https://github.com/k9mil/eagle"],
         ["⚡ kamil.codes", "My personal web(site) created with Flask, TailwindCSS and gunicorn.", "https://github.com/kamil-codes/kamil.codes"],
         ["👁️ Oculus", "Unmaintained camera scraper for Allegro & OLX to try and catch low priced cameras at user-set prices. Written in Python incl. BeautifulSoup4 & requests.", "https://github.com/k9mil/oculus-monitor"],
+        ["🚄 velocitas", "A simulation of Docker + NGINX load balancing. Built with Go and Fiber.", "https://github.com/k9mil/velocitas"],
     ]
 
     return render_template("projects.html", projects=projects_list)
